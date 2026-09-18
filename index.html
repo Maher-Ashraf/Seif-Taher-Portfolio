@@ -7,62 +7,87 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Navigation Header -->
+    <!-- Header Navigation -->
     <header class="navbar">
-        <div class="logo">PORTFOLIO</div>
+        <div class="logo">SCULPTURE STUDIO</div>
         <nav>
             <a href="#about">About</a>
-            <a href="#sculptures">Sculptures</a>
+            <a href="#studies">Studies</a>
+            <a href="#gallery">Completed Works</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <!-- Hero / About Section -->
+    <!-- Hero / Profile Section -->
     <section id="about" class="hero-section">
         <div class="hero-container">
             <div class="hero-image-wrapper">
                 <img src="artist.jpg" alt="Sculptor Profile" class="hero-img">
-                <div class="image-border-accent"></div>
+                <div class="image-accent-border"></div>
             </div>
             <div class="hero-text">
                 <span class="tagline">Sculptor & Visual Artist</span>
-                <h1>Crafting Form & Space</h1>
+                <h1>Form, Material & Expression</h1>
                 <p class="bio">
-                    Welcome to my portfolio. Exploring textures, raw materials, and artistic expression through three-dimensional forms. Each sculpture represents a journey through movement and emotion.
+                    Rooted in the rich artistic soil of Egypt, I am a sculptor driven by a deep fascination with the human form and the raw, tactile language of materials. My practice is a constant exploration of the space between classical figurative sculpture and conceptual expression. From terracotta anatomical studies to bold, experimental pieces, my work translates emotion, identity, and raw form into physical mass.
                 </p>
-                <a href="#sculptures" class="btn-primary">Explore Works</a>
+                <a href="#studies" class="btn-primary">View Process & Works</a>
             </div>
         </div>
     </section>
 
-    <!-- Works / Portfolio Section -->
-    <section id="sculptures" class="portfolio-section">
-        <div class="section-header">
-            <h2>Sculptures Archive</h2>
+    <!-- Dedicated Section: Studies & Material Exploration -->
+    <section id="studies" class="studies-section">
+        <div class="section-header align-left">
+            <span class="sub-title">Process & Clay Work</span>
+            <h2>Studies & Material Exploration</h2>
             <div class="accent-line"></div>
         </div>
 
-        <!-- Year Filter Buttons -->
-        <div class="year-filters" id="yearFilters">
-            <!-- Dynamic Year Buttons will be loaded here via JS -->
+        <div class="studies-intro-box">
+            <p class="quote">
+                "A glimpse behind the scenes. These uncompleted clay studies capture the raw, spontaneous moments of creation—where form is born, anatomy is tested, and the dialogue between sculptor and clay begins before it is ever finalized."
+            </p>
         </div>
 
-        <!-- Sculpture Grid -->
+        <!-- Uncompleted Clay Studies Grid -->
+        <div class="studies-grid" id="studiesGrid">
+            <!-- Dynamic Clay Studies items will load here -->
+        </div>
+    </section>
+
+    <!-- Main Portfolio: Divided by Materials & Years -->
+    <section id="gallery" class="portfolio-section">
+        <div class="section-header">
+            <span class="sub-title">Archive</span>
+            <h2>Completed Works</h2>
+            <div class="accent-line center"></div>
+        </div>
+
+        <!-- Material Filter Tabs -->
+        <div class="filter-container">
+            <div class="filter-label">Filter by Material:</div>
+            <div class="material-filters" id="materialFilters">
+                <!-- Dynamic Material Buttons -->
+            </div>
+        </div>
+
+        <!-- Gallery Card Grid -->
         <div class="gallery-grid" id="galleryGrid">
-            <!-- Sculpture items will be generated dynamically -->
+            <!-- Completed sculptures will load here -->
         </div>
     </section>
 
     <!-- Contact & Footer -->
     <footer id="contact" class="footer">
         <div class="footer-content">
-            <h3>Get In Touch</h3>
-            <p>Interested in commissions or exhibitions?</p>
-            <p class="email">contact@sculptor.com</p>
+            <h2>Get In Touch</h2>
+            <p>For exhibitions, commissions, or art inquiries:</p>
+            <a href="mailto:contact@sculptor.com" class="email-link">contact@sculptor.com</a>
             <div class="copyright">&copy; 2026 Sculptor Portfolio. All rights reserved.</div>
         </div>
     </footer>
