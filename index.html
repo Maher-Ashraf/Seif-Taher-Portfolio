@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sculptor Portfolio</title>
+    <title>Sculptor Portfolio | Home</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,18 +15,19 @@
     <header class="navbar">
         <div class="logo">SCULPTURE STUDIO</div>
         <nav>
-            <a href="#about">About</a>
-            <a href="#studies">Studies</a>
-            <a href="#gallery">Completed Works</a>
+            <a href="index.html" class="active">Home</a>
+            <a href="sculptures.html">Sculptures</a>
+            <a href="behind-the-scenes.html">Behind The Scenes</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <!-- Hero / Profile Section -->
-    <section id="about" class="hero-section">
+    <!-- Hero / Profile Section (الواجهة الرئيسية) -->
+    <section class="hero-section">
         <div class="hero-container">
             <div class="hero-image-wrapper">
-                <img src="artist.jpg" alt="Sculptor Profile" class="hero-img">
+                <!-- صورة الفنان بالبدلة في المسرح -->
+                <img src="hero_suit.jpg" alt="Sculptor on Stage in Suit" class="hero-img">
                 <div class="image-accent-border"></div>
             </div>
             <div class="hero-text">
@@ -35,50 +36,42 @@
                 <p class="bio">
                     Rooted in the rich artistic soil of Egypt, I am a sculptor driven by a deep fascination with the human form and the raw, tactile language of materials. My practice is a constant exploration of the space between classical figurative sculpture and conceptual expression. From terracotta anatomical studies to bold, experimental pieces, my work translates emotion, identity, and raw form into physical mass.
                 </p>
-                <a href="#studies" class="btn-primary">View Process & Works</a>
+                <div class="hero-cta-buttons">
+                    <a href="sculptures.html" class="btn-primary">Explore Completed Works</a>
+                    <a href="behind-the-scenes.html" class="btn-secondary">Behind The Scenes</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Dedicated Section: Studies & Material Exploration -->
-    <section id="studies" class="studies-section">
-        <div class="section-header align-left">
-            <span class="sub-title">Process & Clay Work</span>
-            <h2>Studies & Material Exploration</h2>
-            <div class="accent-line"></div>
-        </div>
-
-        <div class="studies-intro-box">
-            <p class="quote">
-                "A glimpse behind the scenes. These uncompleted clay studies capture the raw, spontaneous moments of creation—where form is born, anatomy is tested, and the dialogue between sculptor and clay begins before it is ever finalized."
-            </p>
-        </div>
-
-        <!-- Uncompleted Clay Studies Grid -->
-        <div class="studies-grid" id="studiesGrid">
-            <!-- Dynamic Clay Studies items will load here -->
-        </div>
-    </section>
-
-    <!-- Main Portfolio: Divided by Materials & Years -->
-    <section id="gallery" class="portfolio-section">
-        <div class="section-header">
-            <span class="sub-title">Archive</span>
-            <h2>Completed Works</h2>
+    <!-- Quick Navigation Cards Section (معاينة سريعة للأقسام) -->
+    <section class="sections-preview">
+        <div class="section-header center">
+            <span class="sub-title">Portfolio Categories</span>
+            <h2>Explore The Collection</h2>
             <div class="accent-line center"></div>
         </div>
 
-        <!-- Material Filter Tabs -->
-        <div class="filter-container">
-            <div class="filter-label">Filter by Material:</div>
-            <div class="material-filters" id="materialFilters">
-                <!-- Dynamic Material Buttons -->
-            </div>
-        </div>
+        <div class="preview-cards-container">
+            <!-- كارت قسم المنحوتات -->
+            <a href="sculptures.html" class="preview-card">
+                <div class="preview-card-img" style="background-image: url('angler_cutout.jpg');"></div>
+                <div class="preview-card-overlay">
+                    <h3>01. Completed Sculptures</h3>
+                    <p>Archive of finished pieces categorized by material & year.</p>
+                    <span class="card-link">View Gallery &rarr;</span>
+                </div>
+            </a>
 
-        <!-- Gallery Card Grid -->
-        <div class="gallery-grid" id="galleryGrid">
-            <!-- Completed sculptures will load here -->
+            <!-- كارت قسم ما وراء الكواليس -->
+            <a href="behind-the-scenes.html" class="preview-card">
+                <div class="preview-card-img" style="background-image: url('clay_study1.jpg');"></div>
+                <div class="preview-card-overlay">
+                    <h3>02. Behind The Scenes</h3>
+                    <p>Studies & Material Exploration: Uncompleted clay studies and raw creation moments.</p>
+                    <span class="card-link">Enter Studio &rarr;</span>
+                </div>
+            </a>
         </div>
     </section>
 
@@ -92,6 +85,5 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
