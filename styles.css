@@ -1,15 +1,18 @@
-/* Color Palette: Pure White, Deep Crimson Red, Warm Gold/Yellow, Dark Accent */
+/* =========================================================
+   SCULPTOR PORTFOLIO - MAIN STYLESHEET (styles.css)
+   Color Palette: Deep Crimson Red, Warm Gold, Pure White, Dark Obsidian
+   ========================================================= */
+
 :root {
     --bg-light: #FAFAFA;
     --bg-white: #FFFFFF;
-    --bg-dark-card: #181818;
     --text-dark: #121212;
     --text-muted: #666666;
     
-    /* Preferred Accent Colors */
+    /* Preferred Palette */
     --accent-red: #B22222;        /* Rich Crimson Red */
     --accent-red-hover: #8B0000;
-    --accent-yellow: #E5B80B;     /* Warm Gold/Yellow */
+    --accent-yellow: #E5B80B;     /* Warm Gold / Yellow */
     --accent-yellow-light: #FFFDF0;
     --accent-white: #FFFFFF;
     
@@ -32,7 +35,7 @@ body {
     line-height: 1.6;
 }
 
-/* Header Navbar */
+/* Header & Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -59,17 +62,20 @@ body {
     color: var(--text-dark);
     margin-left: 2rem;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: var(--transition);
 }
 
-.navbar nav a:hover {
+.navbar nav a:hover,
+.navbar nav a.active {
     color: var(--accent-red);
+    border-bottom: 2px solid var(--accent-red);
+    padding-bottom: 0.3rem;
 }
 
-/* Hero Section */
+/* Hero Section (صورة المسرح بالبدلة والنبذة) */
 .hero-section {
     padding: 5rem 8%;
     max-width: 1300px;
@@ -89,21 +95,21 @@ body {
 
 .hero-img {
     width: 100%;
-    max-width: 380px;
-    height: 480px;
+    max-width: 420px;
+    height: 520px;
     object-fit: cover;
     border-radius: 4px;
     display: block;
     position: relative;
     z-index: 2;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.18);
 }
 
 .image-accent-border {
     position: absolute;
     width: 100%;
-    max-width: 380px;
-    height: 480px;
+    max-width: 420px;
+    height: 520px;
     border: 3px solid var(--accent-red);
     top: 20px;
     left: 20px;
@@ -128,8 +134,16 @@ body {
 
 .hero-text .bio {
     color: var(--text-muted);
-    font-size: 1.05rem;
-    margin-bottom: 2rem;
+    font-size: 1rem;
+    margin-bottom: 2.2rem;
+    line-height: 1.8;
+}
+
+/* Action Buttons */
+.hero-cta-buttons {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
 }
 
 .btn-primary {
@@ -151,11 +165,31 @@ body {
     color: var(--text-dark);
 }
 
-/* Studies & Material Exploration Section */
-.studies-section {
-    padding: 6rem 8%;
-    background-color: #121212;
+.btn-secondary {
+    display: inline-block;
+    padding: 0.9rem 2.2rem;
+    background-color: transparent;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    border: 2px solid var(--text-dark);
+    transition: var(--transition);
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-dark);
     color: var(--accent-white);
+}
+
+/* Section Header Typography */
+.section-header {
+    margin-bottom: 2.5rem;
+}
+
+.section-header.center {
+    text-align: center;
 }
 
 .sub-title {
@@ -183,198 +217,83 @@ body {
     margin: 0.8rem auto 0;
 }
 
-.studies-intro-box {
-    margin: 2.5rem 0 3.5rem 0;
-    padding: 2rem;
-    border-left: 4px solid var(--accent-yellow);
-    background-color: #1E1E1E;
-    border-radius: 0 8px 8px 0;
-}
-
-.studies-intro-box .quote {
-    font-size: 1.15rem;
-    font-style: italic;
-    line-height: 1.8;
-    color: #E0E0E0;
-}
-
-/* Grid Layout for Clay Studies */
-.studies-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.study-card {
-    background-color: #1E1E1E;
-    border-radius: 6px;
-    overflow: hidden;
-    border: 1px solid #2C2C2C;
-    transition: var(--transition);
-}
-
-.study-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent-yellow);
-}
-
-.study-card-img {
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-    display: block;
-}
-
-.study-card-body {
-    padding: 1.2rem;
-}
-
-.study-card-title {
-    font-family: var(--font-heading);
-    font-size: 1.15rem;
-    color: var(--accent-white);
-}
-
-.study-card-meta {
-    font-size: 0.8rem;
-    color: var(--accent-yellow);
-    margin-top: 0.3rem;
-}
-
-/* Portfolio Gallery Section */
-.portfolio-section {
+/* Sections Preview Cards Section */
+.sections-preview {
     padding: 6rem 8%;
     background-color: var(--bg-white);
 }
 
-.section-header {
-    text-align: center;
-    margin-bottom: 2.5rem;
-}
-
-/* Material Filters */
-.filter-container {
-    text-align: center;
-    margin-bottom: 3.5rem;
-}
-
-.filter-label {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    margin-bottom: 0.8rem;
-    font-weight: 600;
-}
-
-.material-filters {
-    display: flex;
-    justify-content: center;
-    gap: 0.8rem;
-    flex-wrap: wrap;
-}
-
-.filter-btn {
-    background: transparent;
-    border: 2px solid var(--text-dark);
-    padding: 0.5rem 1.6rem;
-    font-family: var(--font-body);
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--transition);
-    border-radius: 30px;
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-    background-color: var(--accent-red);
-    border-color: var(--accent-red);
-    color: var(--accent-white);
-}
-
-/* Gallery Grid */
-.gallery-grid {
+.preview-cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2.5rem;
-    max-width: 1300px;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: 3rem auto 0;
 }
 
-.card {
-    background-color: var(--bg-white);
+.preview-card {
+    position: relative;
+    height: 420px;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-    border: 1px solid #EAEAEA;
+    text-decoration: none;
+    color: var(--accent-white);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     transition: var(--transition);
+    border: 1px solid #EAEAEA;
 }
 
-.card:hover {
+.preview-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(178, 34, 34, 0.15);
+    box-shadow: 0 15px 35px rgba(178, 34, 34, 0.2);
     border-color: var(--accent-yellow);
 }
 
-.card-img-container {
-    width: 100%;
-    height: 360px;
-    overflow: hidden;
-    background-color: #F0F0F0;
-}
-
-.card-img-container img {
+.preview-card-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease;
 }
 
-.card:hover .card-img-container img {
-    transform: scale(1.05);
+.preview-card:hover .preview-card-img {
+    transform: scale(1.08);
 }
 
-.card-info {
-    padding: 1.5rem;
-}
-
-.card-badges {
+.preview-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.85) 100%);
+    padding: 2.5rem;
     display: flex;
-    gap: 0.5rem;
-    margin-bottom: 0.6rem;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
-.badge-year {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--accent-red);
-    background: var(--accent-yellow-light);
-    padding: 0.2rem 0.6rem;
-    border-radius: 4px;
-    border: 1px solid var(--accent-yellow);
-}
-
-.badge-material {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--text-dark);
-    background: #EAEAEA;
-    padding: 0.2rem 0.6rem;
-    border-radius: 4px;
-}
-
-.card-title {
+.preview-card-overlay h3 {
     font-family: var(--font-heading);
-    font-size: 1.3rem;
-    margin-bottom: 0.8rem;
-    color: var(--text-dark);
+    font-size: 1.5rem;
+    color: var(--accent-yellow);
+    margin-bottom: 0.5rem;
 }
 
-.card-description {
-    color: var(--text-muted);
+.preview-card-overlay p {
     font-size: 0.95rem;
+    color: #DDD;
+    margin-bottom: 1.2rem;
     line-height: 1.6;
 }
 
-/* Footer */
+.card-link {
+    font-weight: 600;
+    color: var(--accent-white);
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+/* Footer Section */
 .footer {
     background-color: #0A0A0A;
     color: var(--accent-white);
@@ -410,6 +329,7 @@ body {
     color: #666;
 }
 
+/* Responsive Styles */
 @media (max-width: 900px) {
     .hero-container {
         grid-template-columns: 1fr;
@@ -420,5 +340,8 @@ body {
     }
     .image-accent-border {
         display: none;
+    }
+    .hero-cta-buttons {
+        justify-content: center;
     }
 }
